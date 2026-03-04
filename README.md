@@ -30,9 +30,7 @@ You can try the live application here:
 ---
 
 ## 📸 Preview
-![Project Screenshot](https://via.placeholder.com/800x400?text=Password+Generator+Preview+Coming+Soon) 
-*(Tip: Replace this link with an actual screenshot of your app later)*
-
+![Password Generator Preview](https://github.com/kulshrestha-sanket123/Password-Generator/blob/main/Screenshot.png?raw=true)
 ---
 
 ## 👤 Author
