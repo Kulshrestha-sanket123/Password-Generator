@@ -1,0 +1,467 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fff;
+    min-height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+    display: grid;
+    place-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+.container{
+    position: relative;
+    background: #ffffff;
+    border: 1px solid rgba(0,68,255,0.1);
+    padding: 10px 30px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    border-radius: 30px;
+    background-color: #f8fafc;
+}
+
+.container #themeSwitch{
+    position: absolute;
+    top: 58px;
+    right: 29px;
+    left: auto;
+    font-size: 28px;
+    cursor: pointer;
+    font-weight: 900;
+    width: 50px;
+    height: 1px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+:root{
+    --bg-color: #f1f5f9;
+    --container-bg: #f8fafc;
+    --text-color: #1e293b;
+    --input-bg: #ffffff;
+    --accent-color: #2ecc71;
+}
+[data-theme='dark'] {
+    --bg-color: #1eb3e5;     
+    --container-bg: #0c2e3792; 
+    --text-color: #f8fafc;    
+    --input-bg: #334155;       
+    --accent-color: #2ecc71;
+}
+[data-theme='dark'] #password:hover {
+    box-shadow: 0 0 15px rgba(0, 68, 60, 0.2);
+    border-color: #15ccf1;
+}
+[data-theme='dark'] .row:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+.container{
+    background-color: var(--container-bg) !important;
+}
+body{
+    background-color: var(--background-color);
+}
+.theme-icon{
+    color: var(--icon-color);
+}
+#passwordLengthText{
+    color: var(--password-text-color);
+}
+
+
+.container h1{
+    margin: 15px 0px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color:rgb(0, 4, 255);
+}
+
+.container h1 span{
+    text-decoration: 4px underline #1a237e;
+    text-underline-offset: 10px;
+}
+
+.container h2{
+    margin: 15px 0px;
+    color: #71ff05;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.container h2 span{
+    text-decoration: 4px underline #1a237e;
+    text-underline-offset: 10px;
+}
+
+.indicators {
+    display: flex;
+    flex-direction:  row-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px; 
+    margin-right: 5px;
+    margin-bottom: 8px; 
+    height: 20px;
+}
+
+#strengthText{
+    font-size: 13px;
+    font-weight: 600;
+    margin-right: 5px; 
+    transition: all 0.3s ease;
+}
+
+.light {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.2); 
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+}
+.red.active { 
+    background-color: #ff4d4d;
+    box-shadow: 0 0 12px #ff4d4d, 0 0 4px #ff4d4d; 
+}
+.green.active { 
+    background-color: #2ecc71; 
+    box-shadow: 0 0 12px #2ecc71, 0 0 4px #2ecc71; 
+}
+
+.passwordBox{
+    position: relative;
+    width:100%;
+    margin: 15px 0px;
+}
+
+.passwordBox input{
+    padding-right: 20px;
+}
+
+#password{
+    width: 100%;
+    padding: 10px 120px 10px 20px;
+    box-sizing: border-box;     
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    outline: 0;
+    border: 3px solid #2600ff;
+    border-radius: 5px;
+    color: #1a227e;
+    font-weight: 600;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+#password:hover, #password:focus{
+    border-color: #0044ff;
+    box-shadow: 0 0 15px rgba(0, 68, 255, 0.4);
+    background-color: #f8faff;
+}
+
+#password::placeholder{
+    font-weight: 400;
+}
+
+.passwordBox .icons {
+    position: absolute;
+    padding:auto;
+    right: 14px;
+    top: 19%;
+    transform: translateY(-50%); 
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    z-index: 10;
+}
+
+.passwordBox .icons span {
+    font-size: 28px;
+    cursor: pointer;
+    color: #1a227e;
+    font-weight: 900;
+}
+
+.line .line1 {
+    position: absolute;
+    top: 19%;
+    right: 112px;
+    height: 52px;
+    width: 2px;
+    transform: translateY(-50%);
+    background-color: #2600ff;
+    
+}
+.line .line2 {
+    position: absolute;
+    top: 19%;
+    right: 55px;
+    height: 52px;
+    width: 2px;
+    transform: translateY(-50%);
+    background-color: #2600ff;
+    
+}
+
+.lengthRow p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    color: #1a237e;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.lengthRow #sliderValue{
+    position: absolute;
+    top: 77px;
+    right: 25px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#lengthSlider{
+    appearance: none;
+    background: #d3d3d3;
+    top: 25px;
+    width: 100%;
+    height: 5px;
+    outline: none;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* For Chrome, Edge, Safari, Opera */
+#lengthSlider::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4400ff;
+    border: 4px solid #ffffff;
+    border-radius: 50px;
+    outline: 2px solid #4400ff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* For Firefox (Same Properties) */
+#lengthSlider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #4400ff;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    outline: 2px solid #4400ff;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+#lengthSlider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(68, 0, 255, 0.5);
+    transition: 0.2s ease-in-out;
+}
+
+/* When setting length by dragging */
+#lengthSlider::-webkit-slider-thumb:active {
+    background: #ffffff;
+    border: 4px solid #4400ff;
+}
+
+.row{
+    margin: 15px 0px;
+    position: relative;
+    box-shadow: 0 0 5px rgba(107,107,107,0.4);
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.row:hover{
+    background-color: rgba(0, 68, 255, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    transform: translateY(-2px); 
+} 
+
+.row label{
+    margin-inline: 25px;
+    font-weight: 600;
+}
+
+.checkbox{
+    color: #0044ff;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+#generateBtn{
+    position: relative;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background: #07ad2b;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 0;
+    border: 0;
+    margin-block: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.2s ease;
+}
+
+#generateBtn:hover{
+    background-color: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.1);
+    letter-spacing: 0.5px;
+}
+
+#generateBtn:active{
+    transform: translateY(0) scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    filter: brightness(0.9);
+}
+
+#generateBtn span{
+    margin-inline: 5px;
+}
+
+
+/* For Tablets (Between 481px and 768px) */
+@media (max-width: 768px){
+
+    .container{
+        width: 90%;
+        max-width: 450px;
+        padding: 8px 20px;
+    }
+
+    .container h1{
+        font-size: 26px;
+    }
+
+    .line .line1{
+        right: 105px;
+        height: 48px;
+    }
+
+    .line .line2{
+        right: 52px;
+        height: 48px;
+    }
+
+    .passwordBox .icons{
+        gap: 23px;
+        right: 4%;
+    }
+
+    #password{
+        font-size: 18px;
+        padding-right: 110px;
+    }
+}
+
+/* For Mobile Devices (Less than 480px) */
+@media (max-width: 480px){
+
+    .container{
+        width: 95%;
+        padding: 10px 20px;
+        border-radius: 20px;
+    }
+
+    .container #themeSwitch{
+        top: 45px;
+        right: 20px;
+        font-size: 22px;
+    }
+
+    .container h1{
+        font-size: 20px;
+        margin-top: 25px;
+    }
+    
+    .container h2{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    #password{
+        font-size: 16px;
+        padding-right: 90px;
+    }
+
+    .passwordBox .icons{
+        gap: 20px;
+        right: 14px;
+    }
+
+    .passwordBox .icons span {
+        font-size: 22px;
+    }
+
+    .line .line1{
+        right: 87px;
+        height: 45px;
+    }
+
+    .line .line2{
+        right: 44px;
+        height: 45px;
+    }
+
+    .row{
+        padding: 8px 12px;
+        margin: 10px 0;
+    }
+
+    .row label{
+        font-size: 14px;
+        margin-inline: 15px;
+    }
+
+    .checkbox{
+        font-size: 22px;
+    }
+
+    .lengthRow p{
+        font-size: 15px;
+    }
+
+    #sliderValue{
+        font-size: 16px;
+        top: 72px;
+    }
+
+    button{
+        font-size: 16px;
+        padding: 12px;
+        border-radius: 8px;
+    }
+}
